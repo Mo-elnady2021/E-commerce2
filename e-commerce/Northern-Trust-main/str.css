@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.center .stars {
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  cursor: pointer;
+  float: right;
+  font-size: 50px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.stars label:before {
+  content: '★';
+}
+.stars input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.stars input:checked ~ .result:before {
+  display: block;
+}
